@@ -1,0 +1,33 @@
+Reference: 
+Operating Systems: Three Easy Pieces
+Operating Systems Principles and Practice
+
+what is an operating systems:
+layer between applications and hardware
+
+manage hardware resources: CPU, memory and disk, network and modem, IO devices
+provide abstractions to hide details of hardware from application
+processes, threads, Virtual Memory, file systems
+
+- mediate access from different applications
+- benefits to applications: simpler, device independent, portable
+- virtual machine interface: each program thinks it owns the computer
+- provides protection( prevents one processer from clobbering another)
+- provides sharing: concurrent execution, communication among multiple programs(cut & paste), file system shared implementations of common facilities
+
+primitive:
+just a library of standard services
+simplifying assumptions: systems runs one program at a time
+problems: poor utilization: CPU idle while waiting for disk
+
+multitasking:
+more than one process can be running at once: when one process blocks, run another process
+mechanism: context-switch: when one process resumes, it can continue from last execution point
+problems: ill-behaved process. go into infinite loop and never relinquish CPU, scribble over other processes' memory
+solutions: scheduling(take CPU away from looping process)
+
+OS kernel runs in privileged mode(shaded)
+
+system calls: application can invoke kernel through system calls
+
+standard library implemented in terms of syscalls
