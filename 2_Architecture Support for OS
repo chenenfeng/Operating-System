@@ -1,0 +1,27 @@
+NorthBridge   SouthBridge
+challenge: protection
+how to execute a program with restricted privilege
+Solution: through a simulator
+
+dual-mode operation
+user mode,  kernel mode
+
+protected instruction
+IO memory halt
+protection rings  ring 0 is kernel mode
+
+2. generating and handling events
+change mode to kernel mode and invoke code to handle event
+os is one big event handler
+two kinds: interrupts and  exception
+
+computer is more than CPU, IO devices occasionally need attention
+solution: polling   polling is like picking up your phone every few seconds to see if you have a call
+interrupt request lines(IRQs)
+programmable interrupt controller(PIC): when and which decvice wish to interrupt
+Interrupt Vector Table(IVT) in x86 called interrupt descriptor table
+
+interrupt are the basis for asynchronouos IO
+
+usage2: timer
+timer is critical
