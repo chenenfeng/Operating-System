@@ -25,3 +25,34 @@ interrupt are the basis for asynchronouos IO
 
 usage2: timer
 timer is critical
+
+trap and fault
+
+trap to kernel mode, save state -> trap handler -> read(） kernel routine
+
+Process Abstraction
+uniporgramL process run from start to full completion
+load a job from disk into memory, execute it, unload the job
+low utilization of hardware
+
+multiple process
+run more than one process at a time
+speed and hardware utilization
+increase CPU utilization and reduce latency(concurrently)
+
+kernel's view to process
+address space, code, data, execution stack
+program counter, register
+
+name: PID
+PCB(Process Control Block)
+execution state
+how many processes can a system support?
+
+new ->ready -> running -> waiitng
+
+how OS keep track of processes:
+1. process list,  slow
+2. state queues
+
+
